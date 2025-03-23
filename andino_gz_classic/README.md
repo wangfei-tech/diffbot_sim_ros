@@ -57,6 +57,9 @@ ros2 launch andino_gz_classic andino_one_robot.launch.py -s
 ```
 ros2 launch andino_gz_classic andino_one_robot.launch.py use_gazebo_ros_control:=true
 ```
+```
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=diff_controller/cmd_vel_unstamped -p repeat_rate:=20
+```
 
 ### Considerations
 - note that the twist topic is `diff_controller/cmd_vel_unstamped`.
